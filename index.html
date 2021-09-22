@@ -1,16 +1,144 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+  <head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  
+<style>    
+            .container {
+  
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "landing_navbar header header header"
+    "landing_navbar section section section"
+    "landing_navbar section section section"
+    "landing_navbar footer footer footer";
+     }
+  .btn_ir_Registro{
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 550;
+    font-size: 20px;
+    color: #000000;
+    background-color: #55d6f3;
+    border-radius: 6px;
+    border: none 
+      }
+   .btn_ir_Registro:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+   }
+
+.landing_navbar  {
+  background-color:#05c7f2;
+  grid-area: landing_navbar;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nav_01"
+    "."
+    "nav_02";}
+  
+    .header {
+    grid-area: header;
+    }
+.footer {
+  grid-area: footer;
+}
+
+.section {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "slogan imagen imagen"
+    "slogan imagen imagen"
+    "slogan imagen imagen";
+}
+
+.nav_01 {
+  grid-area: nav_01;
+}
+
+.nav_02 {
+  grid-area: nav_02;
+  position: relative;
+}
+
+.btn_irRegistro {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+}
+
+.slogan {
+  grid-area: slogan;
+    padding-left: 40px;
+    
+}
+h1{
+    font-family: 'roboto', sans-serif;
+    font-size: 50px;
+}
+h4{
+    font-family: 'montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.imagen {
+  grid-area: imagen;
+  padding-top: 20px;
+  
+}
+</style>
+
+
+    <meta charset="UTF-8" />
+    <title>Innotech Platform</title>
+    <link rel="stylesheet" href="C:\Users\Familia\Documents\NetBeansProjects\retos\reto 1\repositorio_reto1.html\public_html\estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" ></header>
+      <nav class="landing_navbar" >
+        <div class="nav_01">
+          <img
+            src="../../../../../InnoSystemsLogo.png"
+            alt=""
+            width="125%"/>
+           
+        </div>
+        <div class="nav_02">
+          <button id="btn_irRegistro" class="btn_ir_Registro">
+           Registrarse 
+          </button>
+        </div>
+      </nav>
+      <section class="section">
+        <div class="slogan">
+          <h1>Soluciones</h1>
+          <h1>Hechas</h1>
+          <h1>Software</h1>
+          <h4>Incrementamos la rentabilidad de tu negocio con tecnologia</h4>
+        </div>
+        <div class="imagen">
+          <img
+            src="../../../../../imagen.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+      <footer class="footer"></footer>
+    </div>
+  </body>
 </html>
