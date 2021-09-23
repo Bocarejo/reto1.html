@@ -1,26 +1,20 @@
-/*
-hoja de estilos para reto 1
-*/
-/* 
-    Author     : harold bocarejo
-*/
-body {
-    .container {
+.container {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+  grid-template-rows: 0.2fr 1.5fr 1.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "landing_navbar header header header"
     "landing_navbar section section section"
-    "landing_navbar section section section"
-    "landing_navbar footer footer footer";
+    "landing_navbar section section section";
 }
 
 .landing_navbar {
   grid-area: landing_navbar;
-  border: 0.5px black solid;
+  border-radius: 10px;
+  background-color: #05c7f2;
+  /* border: 0.5px black solid; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -33,7 +27,17 @@ body {
 
 .header {
   grid-area: header;
-  border: 0.5px black solid;
+  /* border: 0.5px black solid; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . . .   m1 m2 m3 m4 m4 .";
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding-top: 18px;
 }
 
 .footer {
@@ -42,8 +46,7 @@ body {
 }
 
 .section {
-  
-  font-family: 'Roboto', sans-serif;
+  position: relative;
   grid-area: section;
   display: grid;
   grid-template-columns: 1.5fr 0.5fr 1fr;
@@ -57,6 +60,7 @@ body {
 
 .nav_01 {
   grid-area: nav_01;
+  position: relative;
 }
 
 .nav_02 {
@@ -66,17 +70,92 @@ body {
 
 .btn_irRegistro {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 40%;
+  top: 220px;
+  bottom: 10%;
+  left: 15%;
+  height: 70px;
+  width: 180px;
+  text-align: left;
+  border: none;
+  color: white;
+  background-color: #44d2f2;
+  border-radius: 10px;
+  padding-left: 40px;
+}
+
+.btn_irRegistro:hover {
+  background-color: white;
+  color: #44d2f2;
+  border-color: #44d2f2;
 }
 
 .slogan {
   grid-area: slogan;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.slogan > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.slogan > h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .imagen {
   grid-area: imagen;
 }
 
+.logo {
+  position: absolute;
+  top: 2%;
+  left: 18%;
+}
+
+.m1 {
+  grid-area: m1;
+  padding-top: 10px;
+}
+
+.m2 {
+  grid-area: m2;
+  padding-top: 10px;
+}
+
+.m3 {
+  grid-area: m3;
+  padding-top: 10px;
+}
+
+.m4 {
+  grid-area: m4;
+  padding-right: 70px;
+}
+
+.btn1 {
+  border: none;
+  color: white;
+  background-color: #05c7f2;
+  height: 40px;
+  border-radius: 30px;
+  padding: 12px;
+  width: 180px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn1:hover {
+  background-color: white;
+  color: #05c7f2;
+  border-color: #05c7f2;
+  border: 0.5px #05c7f2 solid;
 }
